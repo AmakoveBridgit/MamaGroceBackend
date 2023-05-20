@@ -5,26 +5,19 @@ class Customer:
         self.create_password = create_password
         self.confirm_password = confirm_password
 
-    def sign_up(self, name, create_password, confirm_password, email):
-        if (
-            self.name == name
-            and self.create_password == create_password
-            and self.confirm_password == confirm_password
-            and self.email == email
-        ):
-            return "You have successfully signed up"
+    def sign_up(self):
+        if self.create_password == self.confirm_password:
+            signup = {
+                "name": self.name,
+                "email": self.email,
+                "create_password": self.confirm_password,
+            }
+            return signup
         else:
             return "Password and Confirm Password do not match"
 
-
-new_customer = Customer(
-    "Emily Haile", "passwordI22j78", "passwordI22j78", "haileemily@gmail.com"
-)
-
-result = new_customer.sign_up(
-    "Emily Haile", "passwordI22j78", "passwordI22j78", "haileemily@gmail.com"
-)
-
+new_customer = Customer("Emily Haile", "passwordI22j78", "passwordI22j78", "haileemily@gmail.com")
+result = new_customer.sign_up()
 print(result)
 
 class Signin:
@@ -32,13 +25,12 @@ class Signin:
         self.username = username
         self.password = password
 
-    def signin(self):
+    def sign_in(self):
         if self.username == self.username and self.password == self.password:
             return "Successful"
         else:
             return "Invalid username or password"
 
-
-user = Signin("cynthia", "ocean@eyes")
-result = user.signin()
+user = Signin("nyeliep", "ocean@eyes")
+result = user.sign_in()
 print(result)
