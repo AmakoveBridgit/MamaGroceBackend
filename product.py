@@ -18,19 +18,3 @@ items = [{'product': Product('Product1', 10, 'Description1'), 'quantity': 2},
 
 product = Product('Product6', 30, 'Description6')
 product.Order(items)
-
-
-# >>> from MamaGroceBackend.product import Product
-# >>> order=sum([400*2,300*3])
-# >>> order
-# 1700
-# >>> 
-
-# >>> from MamaGroceBackend.product import Product
-# >>> product1=("mango",233,"it is sweeter")
-# >>> product1
-# ('mango', 233, 'it is sweeter')
-# >>> exit()
-
-
-        
