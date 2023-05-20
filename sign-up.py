@@ -39,6 +39,6 @@ class Signin:
             return "Invalid username or password"
 
 
-user = Signin("nyeliep", "ocean@eyes")
+user = Signin("cynthia", "ocean@eyes")
 result = user.signin()
 print(result)
