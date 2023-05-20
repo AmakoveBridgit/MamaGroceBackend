@@ -10,13 +10,13 @@ class Customer:
             signup = {
                 "name": self.name,
                 "email": self.email,
-                "create_password": self.confirm_password,
+                "password": self.confirm_password,
             }
             return signup
         else:
             return "Password and Confirm Password do not match"
 
-new_customer = Customer("Emily Haile", "passwordI22j78", "passwordI22j78", "haileemily@gmail.com")
+new_customer = Customer("Emily Haile", "passwordocean@yes", "passwordocean@yes", "haileemily@gmail.com")
 result = new_customer.sign_up()
 print(result)
 
@@ -26,11 +26,11 @@ class Signin:
         self.password = password
 
     def sign_in(self):
-        if self.username == self.username and self.password == self.password:
+        if self.username == "ehaile" and self.password == "ocean@eyes":
             return "Successful"
         else:
             return "Invalid username or password"
 
-user = Signin("nyeliep", "ocean@eyes")
+user = Signin("ehaile", "ocean@eyes")
 result = user.sign_in()
 print(result)
